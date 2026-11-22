@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXTGEN AI | Command Center</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#091426;color:#eef6ff;font-family:Arial,sans-serif}
+header{padding:22px;background:#10233d;border-bottom:1px solid #24466b}
+h1{margin:0;color:#55baff;letter-spacing:2px}
+header p{color:#9bb9d8;font-size:12px}
+main{max-width:950px;margin:35px auto;padding:20px}
+h2{font-size:30px}
+.intro{color:#a9bdd5}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin:28px 0}
+.card{background:#142b48;border:1px solid #29496d;border-radius:14px;padding:22px}
+.card h3{color:#61bdff}
+.card p{color:#a9bdd5}
+button{background:#1679ca;color:white;border:0;padding:12px 18px;border-radius:8px;cursor:pointer}
+input{background:#0b1b30;border:1px solid #355779;color:white;padding:14px;border-radius:8px;width:100%;margin:10px 0}
+#response{background:#142b48;padding:18px;border-radius:10px;margin-top:12px;min-height:50px}
+footer{text-align:center;color:#7792b0;padding:30px}
+</style>
+</head>
+<body>
+<header>
+<h1>NEXTGEN AI</h1>
+<p>THINK • CREATE • AUTOMATE • EVOLVE</p>
+</header>
+<main>
+<h2>Your AI Command Center</h2>
+<p class="intro">Welcome to the next generation of artificial intelligence.</p>
+<div class="grid">
+<div class="card"><h3>🧠 AI Assistant</h3><p>Ask questions and solve problems.</p></div>
+<div class="card"><h3>💾 Memory Engine</h3><p>Build a system that remembers useful information.</p></div>
+<div class="card"><h3>🤖 AI Agents</h3><p>Organize intelligent automated tasks.</p></div>
+<div class="card"><h3>🔬 AI Research</h3><p>Test ideas and evaluate intelligence.</p></div>
+</div>
+<div class="card">
+<h3>Talk to NEXTGEN AI</h3>
+<p>Our demonstration interface. A real AI connection comes next.</p>
+<input id="question" placeholder="Type your question...">
+<button onclick="askAI()">Send message</button>
+<div id="response">Your AI workspace is ready.</div>
+</div>
+</main>
+<footer>NEXTGEN AI © 2026</footer>
+<script>
+function askAI(){
+const q=document.getElementById('question').value.trim();
+if(!q)return;
+document.getElementById('response').textContent=
+"Message received: "+q+" — AI engine connection coming soon!";
+document.getElementById('question').value="";
+}
+</script>
+</body>
+</html>
