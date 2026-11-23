@@ -48,13 +48,21 @@ footer{text-align:center;color:#7792b0;padding:30px}
 </main>
 <footer>NEXTGEN AI © 2026</footer>
 <script>
-function askAI(){
-const q=document.getElementById('question').value.trim();
-if(!q)return;
-document.getElementById('response').textContent=
-"Message received: "+q+" — AI engine connection coming soon!";
-document.getElementById('question').value="";
-}
+<script>
+async function askAI(){
+  const input = document.getElementById('question');
+  const output = document.getElementById('response');
+  const q = input.value.trim();
+
+  if (!q) return;
+
+  output.textContent = "NEXTGEN AI is thinking...";
+  input.value = "";
+
+  try {
+    const result = await fetch('/api/chat', {
+      method: 'POST',
+      headers
 </script>
 </body>
 </html>
